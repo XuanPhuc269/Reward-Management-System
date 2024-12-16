@@ -1,0 +1,180 @@
+@font-face {
+    src: url('../font/Montserrat-Bold.ttf');
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('../font/Montserrat-SemiBold.ttf');
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+@font-face {
+    src: url('../font/Poppins-Regular.ttf');
+    font-family: Poppins;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('../font/Poppins-Medium.ttf');
+    font-family: Poppins;
+    font-weight: medium;
+}
+
+
+
+.label {
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: normal;
+}
+.bold-text {
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-text-fill: #f25430;
+}
+
+.app-icon {
+    -fx-graphic: url('../icon/award_star.png');
+    -fx-scale-x: 0.4;
+    -fx-scale-y: 0.4;
+    -fx-background-color: transparent;
+}
+
+.user-icon {
+    -fx-graphic: url('../icon/user.png');
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-background-color: transparent;
+}
+
+.admin-text {
+    -fx-text-fill: #F25430;
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-weight: 600;
+}
+
+.function-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #13ae85;
+    -fx-corner-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.function-btn:hover {
+    -fx-background-color: #16d097;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+}
+
+.logout-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-family: Poppins, sans-serif;;
+    -fx-cursor: hand;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #b5b5b5;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #212524;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+    -fx-text-fill: #212524;
+    -fx-cursor: hand;
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgb(33, 37, 36), 5, 0.5, 0, 0);
+}
+
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: #212524;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+    -fx-text-fill: #212524;
+    -fx-cursor: hand;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #212524;
+    -fx-border-width: 1px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+}
+
+.table-view .table-column {
+    -fx-background-color: #13ae85;
+    -fx-text-fill: white;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+    -fx-alignment: center;
+    -fx-border-color: black;
+}
+
+.table-column .first-column {
+    -fx-background-color: black;
+}
+
+
+.delete-btn {
+    -fx-background-color: #7a0000;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+}
+
+.delete-btn:hover {
+    -fx-background-color: #bd0101;
+}
+
+.update-btn {
+    -fx-background-color: #f25430;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+}
+
+.update-btn:hover {
+    -fx-background-color: #ff6b47;
+}
+
+.add-btn {
+    -fx-background-color: #13ae85;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+}
+
+.add-btn:hover {
+    -fx-background-color: #16d097;
+}
+
+.clear-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #212524;
+    -fx-cursor: hand;
+}
+
+.clear-btn:hover {
+    -fx-background-color: #212524;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+}
+
+.close-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover {
+    -fx-background-color: #ffa3a3;
+}

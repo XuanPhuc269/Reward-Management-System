@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.AdminController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@css/AdminScence_css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.AdminController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -20,13 +24,23 @@
                <top>
                   <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutX="137.0" layoutY="-77.0" prefHeight="35.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane layoutX="137.0" layoutY="-19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Label layoutX="35.0" layoutY="14.0" text="Reward Management System">
+                              <Label layoutX="60.0" layoutY="14.0" styleClass="bold-text" stylesheets="@css/AdminScence_css.css" text="Reward Management System">
                                  <font>
                                     <Font name="Tahoma" size="17.0" />
                                  </font>
                               </Label>
+                              <Button layoutX="-24.0" layoutY="-28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" styleClass="app-icon" stylesheets="@css/AdminScence_css.css" />
+                              <Button layoutX="1043.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@css/AdminScence_css.css">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
                            </children>
                         </AnchorPane>
                      </children>
@@ -35,23 +49,63 @@
                <left>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane prefHeight="554.6666666666666" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane maxWidth="200.0" prefHeight="555.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Label layoutX="59.0" layoutY="108.0" text="Welcome">
+                              <Label layoutX="53.0" layoutY="107.0" text="Welcome,">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="userName" layoutX="69.0" layoutY="138.0" text="Admin">
+                              <Label fx:id="userName" layoutX="63.0" layoutY="137.0" styleClass="admin-text" stylesheets="@css/AdminScence_css.css" text="Admin">
                                  <font>
                                     <Font name="Arial Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Line endX="35.49998474121094" layoutX="132.0" layoutY="184.0" startX="-100.0" />
-                              <Button fx:id="homeBtn" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" text="Home" />
-                              <Button fx:id="addBtn" layoutX="10.0" layoutY="241.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" text="Add Children" />
-                              <Button fx:id="rewardBtn" layoutX="10.0" layoutY="284.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" text="Reward Allocation" />
-                              <Button fx:id="logoutBtn" layoutX="14.0" layoutY="515.0" mnemonicParsing="false" onAction="#logout" text="Log out" />
+                              <Line endX="60.5" layoutX="132.0" layoutY="184.0" startX="-122.5" strokeWidth="2.0" />
+                              <Button fx:id="homeBtn" graphicTextGap="0.0" layoutX="13.0" layoutY="203.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="180.0" styleClass="function-btn" stylesheets="@css/AdminScence_css.css" text="Home">
+                                 <font>
+                                    <Font name="Poppins Medium" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="32.0" />
+                                 </padding></Button>
+                              <Button fx:id="addBtn" layoutX="13.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="180.0" styleClass="function-btn" stylesheets="@css/AdminScence_css.css" text="Add Children">
+                                 <font>
+                                    <Font name="Poppins Medium" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="9.0" />
+                                 </padding></Button>
+                              <Button fx:id="rewardBtn" layoutX="13.0" layoutY="302.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="function-btn" text="Reward Allocation">
+                                 <font>
+                                    <Font name="Poppins Medium" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/reward.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button fx:id="logoutBtn" layoutX="17.0" layoutY="508.0" mnemonicParsing="false" onAction="#logout" styleClass="logout-btn" stylesheets="@css/AdminScence_css.css" text="Log out">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/log_out.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button layoutX="44.0" layoutY="8.0" mnemonicParsing="false" styleClass="user-icon" stylesheets="@css/AdminScence_css.css" />
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="27.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/home.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="27.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/add.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                      </children>
@@ -69,57 +123,57 @@
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="527.0" prefWidth="243.0">
                                  <children>
-                                    <Label layoutX="21.0" layoutY="49.0" text="ChildID:">
+                                    <Label layoutX="11.0" layoutY="42.0" text="ChildID:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="rewardChildID" layoutX="81.0" layoutY="47.0" />
-                                    <Label layoutX="29.0" layoutY="88.0" text="Name:">
+                                    <TextField fx:id="rewardChildID" layoutX="71.0" layoutY="40.0" />
+                                    <Label layoutX="19.0" layoutY="81.0" text="Name:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="35.0" layoutY="127.0" text="HhID:">
+                                    <Label layoutX="25.0" layoutY="120.0" text="HhID:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="21.0" layoutY="166.0" text="Reward:">
+                                    <Label layoutX="11.0" layoutY="159.0" text="Reward:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="rewardReward" layoutX="81.0" layoutY="164.0" />
-                                    <Label layoutX="16.0" layoutY="207.0" text="Quantity:">
+                                    <TextField fx:id="rewardReward" layoutX="71.0" layoutY="157.0" />
+                                    <Label layoutX="6.0" layoutY="200.0" text="Quantity:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="rewardQuantity" layoutX="81.0" layoutY="205.0" />
-                                    <Label layoutX="33.0" layoutY="246.0" text="Value:">
+                                    <TextField fx:id="rewardQuantity" layoutX="71.0" layoutY="198.0" />
+                                    <Label layoutX="23.0" layoutY="239.0" text="Value:">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="rewardClearBtn" layoutX="28.0" layoutY="320.0" mnemonicParsing="false" onAction="#rewardClear" prefHeight="40.0" prefWidth="80.0" text="Clear">
+                                    <Button fx:id="rewardClearBtn" layoutX="28.0" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Clear">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="rewardUpdateBtn" layoutX="122.0" layoutY="320.0" mnemonicParsing="false" onAction="#rewardUpdate" prefHeight="40.0" prefWidth="80.0" text="Update">
+                                    <Button fx:id="rewardUpdateBtn" layoutX="122.0" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Update">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="rewardResetBtn" layoutX="77.0" layoutY="382.0" mnemonicParsing="false" onAction="#rewardReset" prefHeight="40.0" prefWidth="80.0" text="Reset">
+                                    <Button fx:id="rewardResetBtn" layoutX="77.0" layoutY="360.0" mnemonicParsing="false" onAction="#rewardReset" prefHeight="40.0" prefWidth="80.0" text="Reset">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
                                     </Button>
-                                    <TextField fx:id="rewardChildName" layoutX="81.0" layoutY="86.0" />
-                                    <TextField fx:id="rewardHouseholdID" layoutX="81.0" layoutY="125.0" />
-                                    <TextField fx:id="rewardValue" layoutX="81.0" layoutY="244.0" />
+                                    <TextField fx:id="rewardChildName" layoutX="71.0" layoutY="79.0" />
+                                    <TextField fx:id="rewardHouseholdID" layoutX="71.0" layoutY="118.0" />
+                                    <TextField fx:id="rewardValue" layoutX="71.0" layoutY="237.0" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="257.0" layoutY="6.0" prefHeight="527.0" prefWidth="637.0">
@@ -144,18 +198,23 @@
                                  <children>
                                     <AnchorPane prefHeight="321.0" prefWidth="873.0">
                                        <children>
-                                          <TableView fx:id="addTableView" layoutX="6.0" layoutY="47.0" prefHeight="267.0" prefWidth="861.0">
+                                          <TableView fx:id="addTableView" layoutX="6.0" layoutY="47.0" prefHeight="267.0" prefWidth="861.0" stylesheets="@css/AdminScence_css.css">
                                             <columns>
                                               <TableColumn fx:id="addColChildID" prefWidth="50.0" text="ChildID" />
                                               <TableColumn fx:id="addColChildName" prefWidth="200.0" text="Child Name" />
                                                 <TableColumn fx:id="addColDOB" prefWidth="120.0" text="DOB" />
-                                                <TableColumn fx:id="addColSchool" prefWidth="200.0" text="School" />
-                                                <TableColumn fx:id="addColClass" prefWidth="70.0" text="Class" />
-                                                <TableColumn fx:id="addColHouseholdID" text="HouseholdID" />
-                                                <TableColumn fx:id="addColAcademicPerformance" prefWidth="140.0" text="AcademicPerformance" />
+                                                <TableColumn fx:id="addColSchool" prefWidth="201.5" text="School" />
+                                                <TableColumn fx:id="addColClass" prefWidth="79.0" text="Class" />
+                                                <TableColumn fx:id="addColHouseholdID" prefWidth="98.0" text="HouseholdID" />
+                                                <TableColumn fx:id="addColAcademicPerformance" prefWidth="111.5" text="AC" />
                                             </columns>
                                           </TableView>
-                                          <TextField fx:id="addSearch" layoutX="14.0" layoutY="14.0" onKeyTyped="#addChildrenSearch" prefHeight="25.0" prefWidth="209.0" promptText="Search" />
+                                          <TextField fx:id="addSearch" layoutX="46.0" layoutY="13.0" onKeyTyped="#addChildrenSearch" prefHeight="25.0" prefWidth="209.0" promptText="Search" />
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@icon/search.png" />
+                                             </image>
+                                          </ImageView>
                                        </children>
                                     </AnchorPane>
                                     <Label layoutX="54.0" layoutY="336.0" text="ChildID:">
@@ -196,28 +255,40 @@
                                     <TextField fx:id="addHouseholdID" layoutX="457.0" layoutY="374.0" />
                                     <Label layoutX="285.0" layoutY="426.0" text="AcademicPerformance:">
                                        <font>
-                                          <Font name="Tahoma" size="15.0" />
+                                          <Font name="Tahoma" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="addClear" layoutX="311.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildReset" prefHeight="40.0" prefWidth="100.0" text="Clear">
+                                    <Button fx:id="addClear" layoutX="387.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildReset" prefHeight="40.0" prefWidth="100.0" styleClass="clear-btn" stylesheets="@css/AdminScence_css.css" text="Clear">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="addDelete" layoutX="432.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildDelete" prefHeight="40.0" prefWidth="100.0" text="Delete">
+                                    <Button fx:id="addDelete" layoutX="508.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildDelete" prefHeight="40.0" prefWidth="100.0" stylesheets="@css/AdminScence_css.css" text="Delete">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
+                                       <styleClass>
+                                          <String fx:value="edit-btn" />
+                                          <String fx:value="delete-btn" />
+                                       </styleClass>
                                     </Button>
-                                    <Button fx:id="addUpdate" layoutX="556.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildUpdate" prefHeight="40.0" prefWidth="100.0" text="Update">
+                                    <Button fx:id="addUpdate" layoutX="632.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildUpdate" prefHeight="40.0" prefWidth="100.0" stylesheets="@css/AdminScence_css.css" text="Update">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
+                                       <styleClass>
+                                          <String fx:value="edit-btn" />
+                                          <String fx:value="update-btn" />
+                                       </styleClass>
                                     </Button>
-                                    <Button fx:id="addAdd" layoutX="682.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildrenAdd" prefHeight="40.0" prefWidth="100.0" text="Add">
+                                    <Button fx:id="addAdd" layoutX="758.0" layoutY="473.0" mnemonicParsing="false" onAction="#addChildenAdd" prefHeight="40.0" prefWidth="100.0" stylesheets="@css/AdminScence_css.css" text="Add">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
+                                       <styleClass>
+                                          <String fx:value="edit-btn" />
+                                          <String fx:value="add-btn" />
+                                       </styleClass>
                                     </Button>
                                     <ChoiceBox fx:id="addAcademicPerformance" layoutX="457.0" layoutY="423.0" prefWidth="150.0" />
                                  </children>
