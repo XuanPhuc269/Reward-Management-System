@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="AdminScene" />
+    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="AdminScene">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +161,7 @@
       <workItem from="1734158216084" duration="4298000" />
       <workItem from="1734169588569" duration="599000" />
       <workItem from="1734236544138" duration="14121000" />
-      <workItem from="1734317188330" duration="293000" />
+      <workItem from="1734317188330" duration="10554000" />
     </task>
     <task id="LOCAL-00001" summary="AdminScene">
       <option name="closed" value="true" />
@@ -167,25 +171,58 @@
       <option name="project" value="LOCAL" />
       <updated>1734252543543</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="AdminScene">
+      <option name="closed" value="true" />
+      <created>1734318919544</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734318919544</updated>
+    </task>
+    <task id="LOCAL-00003" summary="AdminScene">
+      <option name="closed" value="true" />
+      <created>1734320570087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734320570087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HoangAnhBui" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AdminScene" />
     <option name="LAST_COMMIT_MESSAGE" value="AdminScene" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java</url>
-          <line>503</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

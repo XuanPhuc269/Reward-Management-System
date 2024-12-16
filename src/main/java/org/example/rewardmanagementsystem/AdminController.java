@@ -12,10 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -23,7 +20,7 @@ import java.util.ResourceBundle;
 public class AdminController implements Initializable {
 
     @FXML
-    private ChoiceBox addAcademicPerformance;
+    private ChoiceBox<String> addAcademicPerformance;
 
     @FXML
     private Button addAdd;
@@ -155,8 +152,14 @@ public class AdminController implements Initializable {
     private TextField addSearch;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addAcademicPerformance.getItems().add("Excellent");
+        addAcademicPerformance.getItems().add("Good");
         addChildrenShowListData();
-        rewardChildrenShowListData();
+        try {
+            rewardChildrenShowListData();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private Connection connect;
@@ -233,9 +236,7 @@ public class AdminController implements Initializable {
     }
 
     //Them tre nho vao database
-    public void addChildenAdd(){
-        Date date = new Date();
-        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+    public void addChildrenAdd(){
         String sql = "INSERT INTO child VALUES(?,?,?,?,?,?,?)";
         connect = database.connectDb();
 
@@ -246,7 +247,7 @@ public class AdminController implements Initializable {
                 || addDOB.getText().isEmpty()
                 || addHouseholdID.getText().isEmpty()
                 || addSchool.getText().isEmpty()
-                || addAcademicPerformance.)
+                ||addAcademicPerformance.getValue().equals(""))
             //|| GetData.path == null || GetData.path == "")
                 {
                 alert = new Alert(Alert.AlertType.ERROR);
@@ -272,7 +273,7 @@ public class AdminController implements Initializable {
                     prepare.setString(3,  addDOB.getText() );
                     prepare.setString(4,  addSchool.getText() );
                     prepare.setString(5,  addClass.getText() );
-                    prepare.setString(6,  addAcademicPerformance.getText() );
+                    prepare.setString(6, addAcademicPerformance.getValue().toString());
                     prepare.setString(7,  addHouseholdID.getText() );
 
                     /*String uri = GetData.path;
@@ -307,7 +308,7 @@ public class AdminController implements Initializable {
         addDOB.setText("");
         addHouseholdID.setText("");
         addSchool.setText("");
-        addAcademicPerformance.setText("");
+        addAcademicPerformance.setValue("");
         GetData.path = "";
 
     }
@@ -319,7 +320,7 @@ public class AdminController implements Initializable {
                 + "DOB= " + "'" + addDOB.getText() + "',"
                 + "HouseholdID = " + "'" + addHouseholdID.getText() + "',"
                 + "School= " + "'" + addSchool.getText() + "',"
-                + "AcademicPerformance= " + "'" + addAcademicPerformance.getText() + "'"
+                + "AcademicPerformance= " + "'" + addAcademicPerformance.getValue() + "'"
                 + "WHERE ChildID = " + "'" + addChildID.getText() + "';";
 
         connect = database.connectDb();
@@ -331,7 +332,8 @@ public class AdminController implements Initializable {
                     || addDOB.getText().isEmpty()
                     || addHouseholdID.getText().isEmpty()
                     || addSchool.getText().isEmpty()
-                    || addAcademicPerformance.getText().isEmpty())
+                    || addAcademicPerformance.getValue().equals("")
+                     )
             //|| GetData.path == null || GetData.path == "")
             {
                 alert = new Alert(Alert.AlertType.ERROR);
@@ -377,7 +379,7 @@ public class AdminController implements Initializable {
                     || addDOB.getText().isEmpty()
                     || addHouseholdID.getText().isEmpty()
                     || addSchool.getText().isEmpty()
-                    || addAcademicPerformance.getText().isEmpty())
+                     || addAcademicPerformance.getValue().equals(""))
             //|| GetData.path == null || GetData.path == "")
             {
                 alert = new Alert(Alert.AlertType.ERROR);
@@ -435,8 +437,8 @@ public void addChildrenSearch(){
             if(newValue == null || newValue.isEmpty()){
             return false;}
 
-            String searchKey = newValue.toLowerCase();
-             if(predicateData.getChildID().toLowerCase().contains(searchKey)) {
+            String searchKey = newValue;
+            if(predicateData.getChildID().toLowerCase().contains(searchKey)) {
                 return true;
             }
              else if(predicateData.getChildName().toLowerCase().contains(searchKey)) {
@@ -488,7 +490,6 @@ public void addChildrenSearch(){
 
 
     //Tuong tac voi reward Allocation
-
     public ObservableList<ChildrenData> rewardChildrenList() {
         ObservableList<ChildrenData> childrenList = FXCollections.observableArrayList();
         String sql = "Select c.ChildID, c.Name, c.HouseholdID, rwf.RewardName, rwt.Quantity, rwt.TotalOfReward from child c\n" +
@@ -515,21 +516,103 @@ public void addChildrenSearch(){
         return childrenList;
     }
 
-    private ObservableList<ChildrenData> rewardList;
-    public void rewardChildrenShowListData() {
+    private ObservableList<ChildrenData> rewardUpdateList = FXCollections.observableArrayList();
+
+    public ObservableList<ChildrenData> rewardUpdateListData() throws SQLException {
+        if (rewardChildID.getText().isEmpty()
+                || rewardChildName.getText().isEmpty()
+                || rewardHouseholdID.getText().isEmpty()
+                || rewardReward.getText().isEmpty()
+                || rewardQuantity.getText().isEmpty()
+                || rewardValue.getText().isEmpty()) {
+            return null;
+        } else {
+            rewardUpdateList.add(new ChildrenData(rewardChildID.getText(), rewardChildName.getText(), rewardHouseholdID.getText(), rewardReward.getText(), Integer.parseInt(rewardQuantity.getText()), Integer.parseInt(rewardValue.getText())));
+            String sql = "Insert into bonusreward (ChildID, ChildName, HouseholdID, RewardName, Quantity, Value) values(?,?,?,?,?,?)";
+            connect = database.connectDb();
+            prepare = connect.prepareStatement(sql);
+            prepare.setString(1, rewardChildID.getText());
+            prepare.setString(2, rewardChildName.getText());
+            prepare.setString(3, rewardHouseholdID.getText());
+            prepare.setString(4, rewardReward.getText());
+            prepare.setInt(5, Integer.parseInt(rewardQuantity.getText()));
+            prepare.setInt(6, Integer.parseInt(rewardValue.getText()));
+            prepare.executeUpdate();
+
+            return rewardUpdateList;
+        }
+    }
+
+
+    private ObservableList<ChildrenData> rewardList, rewardList2 = FXCollections.observableArrayList();
+    public void rewardChildrenShowListData() throws SQLException {
+        ObservableList<ChildrenData> combineList = FXCollections.observableArrayList();
         rewardList = rewardChildrenList();
+        combineList.addAll(rewardList);
+
+        String sql = "Select * from bonusreward";
+        Statement stmt = connect.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        while (rs.next()) {
+            String childID = rs.getString("ChildID");
+            String childName = rs.getString("ChildName");
+            String householdID = rs.getString("HouseholdID");
+            String rewardName = rs.getString("RewardName");
+            int quantity = rs.getInt("Quantity");
+            int totalOfReward = rs.getInt("Value");
+
+                rewardList2.add(new ChildrenData(childID, childName, householdID, rewardName, quantity, totalOfReward));
+        }
+        combineList.addAll(rewardList2);
         rewardColChildID.setCellValueFactory(new PropertyValueFactory<>("childID"));
         rewardColChildName.setCellValueFactory(new PropertyValueFactory<>("childName"));
         rewardColHouseholdID.setCellValueFactory(new PropertyValueFactory<>("householdID"));
         rewardColReward.setCellValueFactory(new PropertyValueFactory<>("reward"));
         rewardColQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         rewardColValue.setCellValueFactory(new PropertyValueFactory<>("value"));
+        rewardTableView.setItems(combineList);
 
-        rewardTableView.setItems(rewardList);
+        rewardTableView.sort();
+
+
+    }
+    public void rewardUpdate(ActionEvent event) throws SQLException {
+        if(rewardChildID.getText().isEmpty()
+                ||rewardChildName.getText().isEmpty()
+                ||rewardHouseholdID.getText().isEmpty()
+                ||rewardReward.getText().isEmpty()
+                ||rewardQuantity.getText().isEmpty()
+                ||rewardValue.getText().isEmpty())
+        {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please enter all the fields correctly.");
+            alert.showAndWait();
+        }
+
+        else{
+            rewardUpdateListData();
+            rewardChildrenShowListData();
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Complete!");
+            alert.setHeaderText(null);
+            alert.setContentText("Successfully updated child.");
+            alert.showAndWait();
+        }
+    }
+    //reset bang reward
+    public void rewardReset(ActionEvent event) throws SQLException {
+        rewardChildrenShowListData();
     }
 
-    //reset bang reward
-    public void rewardReset(ActionEvent event){
-        rewardChildrenShowListData();
+    //clear bang reward
+    public void rewardClear(ActionEvent event){
+        rewardChildID.setText("");
+        rewardChildName.setText("");
+        rewardHouseholdID.setText("");
+        rewardReward.setText("");
+        rewardQuantity.setText("");
+        rewardValue.setText("");
     }
 }
