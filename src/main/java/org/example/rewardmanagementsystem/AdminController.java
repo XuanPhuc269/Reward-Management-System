@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 public class AdminController implements Initializable {
 
     @FXML
-    private TextField addAcademicPerformance;
+    private ChoiceBox addAcademicPerformance;
 
     @FXML
     private Button addAdd;
@@ -246,7 +246,7 @@ public class AdminController implements Initializable {
                 || addDOB.getText().isEmpty()
                 || addHouseholdID.getText().isEmpty()
                 || addSchool.getText().isEmpty()
-                || addAcademicPerformance.getText().isEmpty())
+                || addAcademicPerformance.)
             //|| GetData.path == null || GetData.path == "")
                 {
                 alert = new Alert(Alert.AlertType.ERROR);
