@@ -7,9 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="AdminScene">
+    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/children.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/fund.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/present.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/AdminScence_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/AdminScence_css.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HoangAnhBui" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -36,7 +46,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/XuanPhuc269/Reward-Management-System.git&quot;,
-    &quot;accountId&quot;: &quot;bc1d310e-5747-443a-b6a2-6cd427836cbb&quot;
+    &quot;accountId&quot;: &quot;88b30b4d-569f-4fc6-aa94-ede38a563067&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -66,10 +76,11 @@
     "Application.DatabaseConnection.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Scene Builder/SceneBuilder.lnk",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/RMS/src/main/resources/FxmlFile/icon",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,6 +97,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\IdeaProjects\RMS\src\main\resources\FxmlFile\icon" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.AdminInterface">
     <configuration name="AdminInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.rewardmanagementsystem.AdminInterface" />
@@ -131,14 +147,16 @@
         <item itemvalue="Application.AdminInterface" />
         <item itemvalue="Application.DatabaseConnection" />
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.DatabaseConnection" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -161,6 +179,9 @@
       <workItem from="1734169588569" duration="599000" />
       <workItem from="1734236544138" duration="14121000" />
       <workItem from="1734317188330" duration="10554000" />
+      <workItem from="1734331028274" duration="153000" />
+      <workItem from="1734331482835" duration="561000" />
+      <workItem from="1734334679778" duration="1282000" />
     </task>
     <task id="LOCAL-00001" summary="AdminScene">
       <option name="closed" value="true" />
