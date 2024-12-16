@@ -65,7 +65,7 @@
                               <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="528.0" prefWidth="872.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="rewardForm" prefHeight="554.6666666666666" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="rewardForm" prefHeight="554.6666666666666" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="527.0" prefWidth="243.0">
                                  <children>
@@ -102,12 +102,12 @@
                                           <Font size="15.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="rewardClearBtn" layoutX="28.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Clear">
+                                    <Button fx:id="rewardClearBtn" layoutX="28.0" layoutY="320.0" mnemonicParsing="false" onAction="#rewardClear" prefHeight="40.0" prefWidth="80.0" text="Clear">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="rewardUpdateBtn" layoutX="122.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Update">
+                                    <Button fx:id="rewardUpdateBtn" layoutX="122.0" layoutY="320.0" mnemonicParsing="false" onAction="#rewardUpdate" prefHeight="40.0" prefWidth="80.0" text="Update">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
@@ -138,7 +138,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="addForm" layoutX="297.0" layoutY="127.0" prefHeight="554.6666666666666" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="addForm" layoutX="297.0" layoutY="127.0" prefHeight="554.6666666666666" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="527.0" prefWidth="873.0">
                                  <children>
