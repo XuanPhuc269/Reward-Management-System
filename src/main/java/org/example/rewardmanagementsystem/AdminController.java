@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 public class AdminController implements Initializable {
 
     @FXML
-    private ChoiceBox addAcademicPerformance;
+    private ChoiceBox<String> addAcademicPerformance;
 
     @FXML
     private Button addAdd;
@@ -155,6 +155,8 @@ public class AdminController implements Initializable {
     private TextField addSearch;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addAcademicPerformance.getItems().add("Excellent");
+        addAcademicPerformance.getItems().add("Good");
         addChildrenShowListData();
         rewardChildrenShowListData();
     }
@@ -233,9 +235,7 @@ public class AdminController implements Initializable {
     }
 
     //Them tre nho vao database
-    public void addChildenAdd(){
-        Date date = new Date();
-        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+    public void addChildrenAdd(){
         String sql = "INSERT INTO child VALUES(?,?,?,?,?,?,?)";
         connect = database.connectDb();
 
@@ -246,7 +246,7 @@ public class AdminController implements Initializable {
                 || addDOB.getText().isEmpty()
                 || addHouseholdID.getText().isEmpty()
                 || addSchool.getText().isEmpty()
-                || addAcademicPerformance.)
+                ||addAcademicPerformance.getValue().equals(""))
             //|| GetData.path == null || GetData.path == "")
                 {
                 alert = new Alert(Alert.AlertType.ERROR);
@@ -272,7 +272,7 @@ public class AdminController implements Initializable {
                     prepare.setString(3,  addDOB.getText() );
                     prepare.setString(4,  addSchool.getText() );
                     prepare.setString(5,  addClass.getText() );
-                    prepare.setString(6,  addAcademicPerformance.getText() );
+                    prepare.setString(6, addAcademicPerformance.getValue().toString());
                     prepare.setString(7,  addHouseholdID.getText() );
 
                     /*String uri = GetData.path;
@@ -307,7 +307,7 @@ public class AdminController implements Initializable {
         addDOB.setText("");
         addHouseholdID.setText("");
         addSchool.setText("");
-        addAcademicPerformance.setText("");
+        addAcademicPerformance.setValue("");
         GetData.path = "";
 
     }
@@ -319,7 +319,7 @@ public class AdminController implements Initializable {
                 + "DOB= " + "'" + addDOB.getText() + "',"
                 + "HouseholdID = " + "'" + addHouseholdID.getText() + "',"
                 + "School= " + "'" + addSchool.getText() + "',"
-                + "AcademicPerformance= " + "'" + addAcademicPerformance.getText() + "'"
+                + "AcademicPerformance= " + "'" + addAcademicPerformance.getValue() + "'"
                 + "WHERE ChildID = " + "'" + addChildID.getText() + "';";
 
         connect = database.connectDb();
@@ -331,7 +331,8 @@ public class AdminController implements Initializable {
                     || addDOB.getText().isEmpty()
                     || addHouseholdID.getText().isEmpty()
                     || addSchool.getText().isEmpty()
-                    || addAcademicPerformance.getText().isEmpty())
+                    || addAcademicPerformance.getValue().equals("")
+                     )
             //|| GetData.path == null || GetData.path == "")
             {
                 alert = new Alert(Alert.AlertType.ERROR);
@@ -377,7 +378,7 @@ public class AdminController implements Initializable {
                     || addDOB.getText().isEmpty()
                     || addHouseholdID.getText().isEmpty()
                     || addSchool.getText().isEmpty()
-                    || addAcademicPerformance.getText().isEmpty())
+                     || addAcademicPerformance.getValue().equals(""))
             //|| GetData.path == null || GetData.path == "")
             {
                 alert = new Alert(Alert.AlertType.ERROR);
