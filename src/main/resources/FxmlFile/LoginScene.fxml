@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="75.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/present.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="76.0" layoutY="244.0" text="Reward Mangement System" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="300.0" layoutY="5.0" prefHeight="400.0" prefWidth="300.0">
+               <children>
+                  <TextField layoutX="60.0" layoutY="178.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
+                  <PasswordField layoutX="60.0" layoutY="218.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
+                  <Button layoutX="60.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" text="Login" />
+                  <Label layoutX="109.0" layoutY="38.0" text="Welcome back!" />
+                  <Label layoutX="85.0" layoutY="70.0" text="please enter your details" />
+                  <Button layoutX="251.0" layoutY="1.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
