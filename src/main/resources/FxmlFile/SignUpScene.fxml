@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="white-bg" stylesheets="@css/SignUpScene.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="white-bg" stylesheets="@css/SignUpScene.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.SignUpController">
    <children>
       <Label fx:id="create_an_account_label" layoutX="63.0" layoutY="58.0" text="Create an account" />
       <Label layoutX="75.0" layoutY="82.0" text="please enter your details" />
@@ -21,10 +21,10 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField layoutX="61.0" layoutY="166.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
-      <PasswordField layoutX="62.0" layoutY="206.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
-      <PasswordField layoutX="61.0" layoutY="247.0" prefHeight="30.0" prefWidth="180.0" promptText="Re-enter password" />
-      <Button layoutX="61.0" layoutY="309.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="sign-up-button" stylesheets="@css/SignUpScene.css" text="Sign up" />
-      <TextField layoutX="62.0" layoutY="126.0" prefHeight="30.0" prefWidth="180.0" promptText="HouseholdID" />
+      <TextField fx:id="signUpUserName" layoutX="61.0" layoutY="166.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
+      <PasswordField fx:id="signUpPassword" layoutX="62.0" layoutY="206.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
+      <PasswordField fx:id="signUpReEnter" layoutX="61.0" layoutY="247.0" prefHeight="30.0" prefWidth="180.0" promptText="Re-enter password" />
+      <Button fx:id="signUpButton" layoutX="61.0" layoutY="309.0" mnemonicParsing="false" onAction="#signUp" prefHeight="35.0" prefWidth="180.0" styleClass="sign-up-button" stylesheets="@css/SignUpScene.css" text="Sign up" />
+      <TextField fx:id="signUpHHID" layoutX="62.0" layoutY="126.0" prefHeight="30.0" prefWidth="180.0" promptText="HouseholdID" />
    </children>
 </AnchorPane>
