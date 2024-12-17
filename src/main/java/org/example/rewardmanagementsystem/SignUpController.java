@@ -62,11 +62,16 @@ public class SignUpController implements Initializable {
             signUpReEnter.clear();
             signUpHHID.clear();
         }
-        else if(signUpHHID.equals("HH00")){
+        else if(signUpHHID.getText().equals("HH00")){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
             alert.setContentText("Cannot create account with this HouseholdID");
+            alert.showAndWait();
+            signUpUserName.clear();
+            signUpPassword.clear();
+            signUpReEnter.clear();
+            signUpHHID.clear();
         }
 
         //oke
@@ -84,7 +89,7 @@ public class SignUpController implements Initializable {
         }
 
 
-        else if(signUpPassword.getText() != signUpReEnter.getText()) {
+        else if(!signUpPassword.getText().equals(signUpReEnter.getText())) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
