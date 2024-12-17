@@ -14,24 +14,24 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane prefHeight="400.0" prefWidth="300.0">
+            <AnchorPane prefHeight="406.0" prefWidth="300.0" styleClass="left-form" stylesheets="@css/LoginScene_style.css">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="75.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                  <Label layoutX="41.0" layoutY="64.0" text="Reward Mangement System" />
+                  <ImageView fitHeight="240.0" fitWidth="240.0" layoutX="30.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icon/present.png" />
+                        <Image url="@icon/app_image.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="76.0" layoutY="244.0" text="Reward Mangement System" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="300.0" layoutY="5.0" prefHeight="400.0" prefWidth="300.0">
+            <AnchorPane layoutX="300.0" layoutY="5.0" prefHeight="400.0" prefWidth="300.0" styleClass="right-form" stylesheets="@css/LoginScene_style.css">
                <children>
-                  <TextField layoutX="60.0" layoutY="178.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
-                  <PasswordField layoutX="60.0" layoutY="218.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
-                  <Button layoutX="60.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" text="Login" />
-                  <Label layoutX="109.0" layoutY="38.0" text="Welcome back!" />
-                  <Label layoutX="85.0" layoutY="70.0" text="please enter your details" />
-                  <Button layoutX="251.0" layoutY="1.0" mnemonicParsing="false">
+                  <TextField layoutX="60.0" layoutY="172.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
+                  <PasswordField layoutX="60.0" layoutY="212.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
+                  <Button layoutX="60.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="login-button" stylesheets="@css/LoginScene_style.css" text="Login" />
+                  <Label fx:id="welcome_back_label" layoutX="89.0" layoutY="103.0" text="Welcome back!" />
+                  <Label layoutX="76.0" layoutY="127.0" text="please enter your details" />
+                  <Button layoutX="255.0" layoutY="1.0" mnemonicParsing="false" styleClass="close-btn" stylesheets="@css/LoginScene_style.css">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -40,6 +40,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Label layoutX="161.0" layoutY="249.0" styleClass="forget-password-label" stylesheets="@css/LoginScene_style.css" text="forget pasword" />
                </children>
             </AnchorPane>
          </children>

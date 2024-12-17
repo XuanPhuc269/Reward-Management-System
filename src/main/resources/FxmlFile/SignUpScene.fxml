@@ -8,7 +8,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="white-bg" stylesheets="@css/SignUpScene.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="create_an_account_label" layoutX="63.0" layoutY="58.0" text="Create an account" />
@@ -22,9 +21,10 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField layoutX="61.0" layoutY="136.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
-      <PasswordField layoutX="62.0" layoutY="176.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
-      <PasswordField layoutX="61.0" layoutY="217.0" prefHeight="30.0" prefWidth="180.0" promptText="Re-enter password" />
-      <Button layoutX="61.0" layoutY="280.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="sign-up-button" stylesheets="@css/SignUpScene.css" text="Sign up" />
+      <TextField layoutX="61.0" layoutY="166.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
+      <PasswordField layoutX="62.0" layoutY="206.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
+      <PasswordField layoutX="61.0" layoutY="247.0" prefHeight="30.0" prefWidth="180.0" promptText="Re-enter password" />
+      <Button layoutX="61.0" layoutY="309.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="sign-up-button" stylesheets="@css/SignUpScene.css" text="Sign up" />
+      <TextField layoutX="62.0" layoutY="126.0" prefHeight="30.0" prefWidth="180.0" promptText="HouseholdID" />
    </children>
 </AnchorPane>
