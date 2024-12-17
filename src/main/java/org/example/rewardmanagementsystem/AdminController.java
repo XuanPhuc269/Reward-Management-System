@@ -6,10 +6,14 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.*;
@@ -179,6 +183,13 @@ public class AdminController implements Initializable {
         try {
             if (result.get().equals(ButtonType.OK)) {
                 //Quay ve sign in sign up dien sau
+                Parent root = FXMLLoader.load(getClass().getResource("/FxmlFile/WelcomePageScene.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.show();
+                Stage currentStage = (Stage) homeForm.getScene().getWindow();
+                currentStage.close();
             }
         }
         catch (Exception e) {
