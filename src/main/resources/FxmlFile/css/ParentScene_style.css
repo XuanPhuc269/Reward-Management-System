@@ -1,0 +1,32 @@
+@font-face {
+    src: url('../font/Montserrat-Bold.ttf');
+    font-family: 'Montserrat Bold';
+}
+
+@font-face {
+    src: url('../font/Montserrat-SemiBold.ttf');
+    font-family: 'Montserrat SemiBold';
+}
+
+@font-face {
+    src: url('../font/Poppins-Regular.ttf');
+    font-family: 'Poppins';
+}
+
+@font-face {
+    src: url('../font/Poppins-Medium.ttf');
+    font-family: 'Poppins Medium';
+}
+
+.white-bg {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-family: 'Poppins Medium';
+    -fx-text-fill: #13ae85;
+}
+
