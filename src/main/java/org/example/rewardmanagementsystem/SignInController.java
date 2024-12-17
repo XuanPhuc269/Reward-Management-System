@@ -85,6 +85,7 @@ public class SignInController implements Initializable {
                                 Stage stage = new Stage();
                                 stage.setScene(new Scene(root));
                                 stage.show();
+                                loginBtn.getScene().getWindow().hide();
                             }
 
                             //scene cua phu huynh

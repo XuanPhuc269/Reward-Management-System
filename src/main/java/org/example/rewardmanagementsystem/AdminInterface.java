@@ -10,7 +10,7 @@ public class AdminInterface extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FxmlFile/LoginScene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/WelcomePageScene.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
