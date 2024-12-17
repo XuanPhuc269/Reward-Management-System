@@ -403,6 +403,7 @@ public class AdminController implements Initializable {
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
                     alert.setContentText("Successfully deleted child.");
+                    alert.showAndWait();
 
                     addChildrenShowListData();
                     addChildReset();

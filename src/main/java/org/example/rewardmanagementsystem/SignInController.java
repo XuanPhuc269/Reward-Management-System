@@ -100,6 +100,15 @@ public class SignInController implements Initializable {
                         throw new RuntimeException(e);
                     }
                 }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Incorrect Password");
+                    alert.showAndWait();
+                    userNameTF.clear();
+                    passwordTF.clear();
+                }
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
