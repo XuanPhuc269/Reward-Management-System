@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.SignInController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -26,9 +25,9 @@
             </AnchorPane>
             <AnchorPane layoutX="300.0" layoutY="5.0" prefHeight="400.0" prefWidth="300.0" styleClass="right-form" stylesheets="@css/LoginScene_style.css">
                <children>
-                  <TextField layoutX="60.0" layoutY="172.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
-                  <PasswordField layoutX="60.0" layoutY="212.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
-                  <Button layoutX="60.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="login-button" stylesheets="@css/LoginScene_style.css" text="Login" />
+                  <TextField fx:id="userNameTF" layoutX="60.0" layoutY="172.0" prefHeight="30.0" prefWidth="180.0" promptText="Username" />
+                  <PasswordField fx:id="passwordTF" layoutX="60.0" layoutY="212.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
+                  <Button fx:id="loginBtn" layoutX="60.0" layoutY="269.0" mnemonicParsing="false" onAction="#logIn" prefHeight="35.0" prefWidth="180.0" styleClass="login-button" stylesheets="@css/LoginScene_style.css" text="Login" />
                   <Label fx:id="welcome_back_label" layoutX="89.0" layoutY="103.0" text="Welcome back!" />
                   <Label layoutX="76.0" layoutY="127.0" text="please enter your details" />
                   <Button layoutX="255.0" layoutY="1.0" mnemonicParsing="false" styleClass="close-btn" stylesheets="@css/LoginScene_style.css">
@@ -40,7 +39,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label layoutX="161.0" layoutY="249.0" styleClass="forget-password-label" stylesheets="@css/LoginScene_style.css" text="forget pasword" />
+                  <Label fx:id="forgetLabel" layoutX="161.0" layoutY="249.0" styleClass="forget-password-label" stylesheets="@css/LoginScene_style.css" text="forget pasword" />
                </children>
             </AnchorPane>
          </children>
