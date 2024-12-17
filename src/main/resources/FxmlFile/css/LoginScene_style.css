@@ -1,0 +1,100 @@
+@font-face {
+    src: url('../font/Montserrat-Bold.ttf');
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('../font/Montserrat-SemiBold.ttf');
+    font-family: Montserrat;
+    font-weight: auto;
+}
+
+@font-face {
+    src: url('../font/Poppins-Regular.ttf');
+    font-family: Poppins;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('../font/Poppins-Medium.ttf');
+    font-family: Poppins;
+    font-weight: auto;
+}
+
+.left-form {
+    -fx-background-color: linear-gradient(to bottom right, #13ae85, #16d097);
+    -fx-border-color: #000;
+    -fx-border-width: 1px;
+}
+
+
+.left-form .label {
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+.right-form {
+    -fx-background-color: white;
+}
+
+.right-form .label {
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+}
+
+.right-form #welcome_back_label {
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-weight: auto;
+    -fx-font-size: 15px;
+    -fx-text-fill: #f25430;
+}
+
+.right-form .text-field {
+    -fx-background-color: white;
+    -fx-border-color: #212524;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+    -fx-text-fill: #212524;
+}
+
+.right-form .text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgb(33, 37, 36), 5, 0.5, 0, 0);
+}
+
+.right-form .login-button {
+    -fx-background-color: #13ae85;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: auto;
+}
+
+.right-form .login-button:hover {
+    -fx-background-color: #16d097;
+}
+
+.close-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover {
+    -fx-background-color: #ffa3a3;
+}
+
+.forget-password-label {
+    -fx-underline: true;
+    -fx-text-fill: #212524;
+    -fx-font-size: 10px;
+}
+
+.forget-password-label:hover {
+    -fx-underline: true;
+    -fx-text-fill: #13ae85;
+}

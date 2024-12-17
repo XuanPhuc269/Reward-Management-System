@@ -1,0 +1,72 @@
+@font-face {
+    src: url('../font/Montserrat-Bold.ttf');
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('../font/Montserrat-SemiBold.ttf');
+    font-family: Montserrat;
+    font-weight: auto;
+}
+
+@font-face {
+    src: url('../font/Poppins-Regular.ttf');
+    font-family: Poppins;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('../font/Poppins-Medium.ttf');
+    font-family: Poppins;
+    font-weight: auto;
+}
+
+.white-bg {
+    -fx-background-color: white;
+}
+
+.close-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover {
+    -fx-background-color: #ffa3a3;
+}
+
+.label {
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: normal;
+    -fx-font-size: 12px;
+}
+
+#create_an_account_label {
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: #f25430;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #212524;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: medium;
+    -fx-text-fill: #212524;
+}
+
+.sign-up-button {
+    -fx-background-color: #13ae85;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-font-family: Poppins, sans-serif;
+    -fx-font-weight: auto;
+}
+
+.sign-up-button:hover {
+    -fx-background-color: #16d097;
+}
