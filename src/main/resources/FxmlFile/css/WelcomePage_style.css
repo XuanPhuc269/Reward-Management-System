@@ -1,0 +1,69 @@
+@font-face {
+    src: url('../font/Montserrat-Bold.ttf');
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('../font/Montserrat-SemiBold.ttf');
+    font-family: Montserrat;
+    font-weight: auto;
+}
+
+@font-face {
+    src: url('../font/Poppins-Regular.ttf');
+    font-family: Poppins;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('../font/Poppins-Medium.ttf');
+    font-family: Poppins;
+    font-weight: auto;
+}
+
+.white-bg {
+    -fx-background-color: white;
+}
+
+.label {
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 32px;
+}
+
+.color-label {
+    -fx-text-fill: #f25430;
+}
+
+.button {
+    -fx-background-color: #13ae85;
+    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-weight: auto;
+    -fx-background-radius: 18px;
+    -fx-cell-size: 100px;
+    -fx-font-size: 16px
+}
+
+.login-btn {
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.login-btn:hover {
+    -fx-background-color: #16d097;
+}
+
+.sign-up-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #13ae85;
+    -fx-border-width: 3px;
+    -fx-border-radius: 18px;
+    -fx-text-fill: #13ae85;
+    -fx-cursor: hand;
+}
+
+.sign-up-btn:hover {
+    -fx-background-color: #13ae85;
+    -fx-text-fill: white;
+}

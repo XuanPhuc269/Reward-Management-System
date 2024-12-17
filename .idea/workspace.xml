@@ -8,29 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="AdminScene">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_12_2024_1_25_CH_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_12_2024_1_25_CH__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_12_2024_1_26_CH_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_12_2024_1_26_CH__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_12_2024_1_08_CH_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_12_2024_1_08_CH__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/SignUpScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/WelcomePage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/LoginScene_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/SignUpScene.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/app_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/children.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/fund.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/icon/present.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/AdminScence_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/AdminScence_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/dashboard.fxml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/WelcomePageScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/WelcomePage_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/WelcomePageScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/SignUpScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/SignUpScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/WelcomePage.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,32 +64,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AdminInterface.executor": "Run",
-    "Application.DatabaseConnection.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Scene Builder/SceneBuilder.lnk",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AdminInterface.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DatabaseConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Scene Builder/SceneBuilder.lnk&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora_aws"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora_aws&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.AdminInterface">
     <configuration name="AdminInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.rewardmanagementsystem.AdminInterface" />
