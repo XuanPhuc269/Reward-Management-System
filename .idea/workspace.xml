@@ -7,12 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="fix bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignUpController.java" afterDir="false" />
-    </list>
+    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="fix bug" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
