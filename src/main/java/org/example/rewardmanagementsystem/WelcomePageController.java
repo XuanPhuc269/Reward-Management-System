@@ -30,6 +30,5 @@ public class WelcomePageController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-        signUpBtn.getScene().getWindow().hide();
     }
 }

@@ -79,7 +79,7 @@ public class SignInController implements Initializable {
                         rs = prepare.executeQuery();
                         if(rs.next()) {
                             String householdID = rs.getString(1);
-
+                            GetData.username = userNameTF.getText();
                             if(householdID.equals("HH00")) {
                                 Parent root = FXMLLoader.load(getClass().getResource("/FxmlFile/AdminScene.fxml"));
                                 Stage stage = new Stage();

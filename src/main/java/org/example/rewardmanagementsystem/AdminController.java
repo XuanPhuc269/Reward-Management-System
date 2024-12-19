@@ -23,6 +23,10 @@ import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
 
+
+    @FXML
+    private Label totalChildrenLabel, totalPresentLabel, fundLabel;
+
     @FXML
     private ChoiceBox<String> addAcademicPerformance;
 
@@ -154,11 +158,14 @@ public class AdminController implements Initializable {
 
     @FXML
     private TextField addSearch;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addAcademicPerformance.getItems().add("Excellent");
         addAcademicPerformance.getItems().add("Good");
         addChildrenShowListData();
+        displayUsername();
         try {
             rewardChildrenShowListData();
         } catch (SQLException e) {
@@ -196,6 +203,53 @@ public class AdminController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    //Cap nhat danh sach phan home
+    public void homeFund() throws SQLException {
+        String sql = "select FORMAT((Quantity * ValueOfEachReward), 0) from rewardfund where RewardName = ?";
+        connect = database.connectDb();
+        prepare = connect.prepareStatement(sql);
+        prepare.setString(1, "Tiền");
+        resultSet = prepare.executeQuery();
+
+        if(resultSet.next()) {
+            fundLabel.setText(resultSet.getString(1));
+        }
+
+    }
+
+
+    //Cap nhat lai so tien khi them hoc sinh
+    public void updateHomeFund(String quan, String RW) throws SQLException {
+        String sql = "Update rewardfund set Quantity = Quantity + ? where RewardName like ?";
+        connect = database.connectDb();
+        prepare = connect.prepareStatement(sql);
+        prepare.setString(1, quan);
+        prepare.setString(2, RW);
+        prepare.executeUpdate();
+    }
+
+    public void homeTotalChildren() throws SQLException {
+        String sql = "select count(*) from child";
+        connect = database.connectDb();
+        prepare = connect.prepareStatement(sql);
+        resultSet = prepare.executeQuery();
+        if(resultSet.next()) {
+            totalChildrenLabel.setText(resultSet.getString(1));
+        }
+    }
+
+    public void homeTotalPresent() throws SQLException {
+        String sql = "select count(*) from child where AcademicPerformance = ? or AcademicPerformance = ?";
+        connect = database.connectDb();
+        prepare = connect.prepareStatement(sql);
+        prepare.setString(1, "Good");
+        prepare.setString(2, "Excellent");
+        resultSet = prepare.executeQuery();
+        if(resultSet.next()) {
+            totalPresentLabel.setText(resultSet.getString(1));
+        }
+    }
     //Hien ten username
     public void displayUsername(){
         userName.setText(GetData.username);
@@ -228,6 +282,8 @@ public class AdminController implements Initializable {
 
         return listData;
     }
+
+
 
     public void addChildrenSelect(){
         ChildrenData childrenDa = (ChildrenData) addTableView.getSelectionModel().getSelectedItem();
@@ -277,7 +333,22 @@ public class AdminController implements Initializable {
                     alert.setHeaderText(null);
                     alert.setContentText("ChildID: " + addChildID.getText() + " already exists.");
                     alert.showAndWait();
-                } else {
+                }
+                else {
+                    if(addAcademicPerformance.getValue().toString().equals("Excellent")){
+                    updateHomeFund("-2", "Tiền");
+                    updateHomeFund("-10", "Vở");
+                    updateHomeFund("-10", "Bút");
+                    homeFund();
+                }
+                else if(addAcademicPerformance.getValue().toString().equals("Good")){
+                    updateHomeFund("-1", "Tiền");
+                    updateHomeFund("-5", "Vở");
+                    updateHomeFund("-5", "Bút");
+                    homeFund();
+                }
+
+
                     prepare = connect.prepareStatement(sql);
                     prepare.setString(1,  addChildID.getText());
                     prepare.setString(2, addChildName.getText() );
@@ -293,8 +364,6 @@ public class AdminController implements Initializable {
                     prepare.setString(9, String.valueOf(sqlDate.getTime()));
                      */
                     prepare.executeUpdate();
-
-
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
@@ -302,6 +371,7 @@ public class AdminController implements Initializable {
                     alert.showAndWait();
                     addChildrenShowListData();
                     addChildReset();
+
                 }
             }
         }
@@ -354,15 +424,39 @@ public class AdminController implements Initializable {
                 alert.showAndWait();
             }
             else {
-                alert = new Alert(Alert.AlertType.INFORMATION);
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Confirmation Message");
                 alert.setHeaderText(null);
                 alert.setContentText("Are you sure you want to update this child?");
                 Optional<ButtonType> result = alert.showAndWait();
-                if (result.get() == ButtonType.OK) {
+                if (result.isPresent() && result.get() == ButtonType.OK) {
+                    String check = "Select AcademicPerformance from child Where ChildID= ?";
+                    prepare = connect.prepareStatement(check);
+                    prepare.setString(1,  addChildID.getText());
+                    resultSet  = prepare.executeQuery();
+                    if (resultSet.next()) {
+                        String academic = resultSet.getString("AcademicPerformance");
+                        if(academic.equals("Excellent")){
+                            if(addAcademicPerformance.getValue().toString().equals("Excellent")){
+                            }
+                            else{
+                                updateHomeFund("-1", "Tiền");
+                                updateHomeFund("-5", "Bút");
+                                updateHomeFund("-5", "Vở");
+                                homeFund();
+                            }
+                        }
+                        else{
+                            if(addAcademicPerformance.getValue().toString().equals("Excellent")){
+                                updateHomeFund("1", "Tiền");
+                                updateHomeFund("5", "Bút");
+                                updateHomeFund("5", "Vở");
+                                homeFund();
+                            }
+                        }
+                    }
                     statement = connect.prepareStatement(sql);
                     statement.executeUpdate(sql);
-
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
@@ -379,10 +473,17 @@ public class AdminController implements Initializable {
         }
     }
 
-    //Delete thong tin tre nho
-    public void addChildDelete(){
-        String sql = "DELETE FROM child WHERE ChildID = " + "'" + addChildID.getText() + "';";
+    public int row;
+    public void childDelete(String table, String id) throws SQLException {
+        String sql = "DELETE FROM " + table + " WHERE ChildID = ?";
         connect = database.connectDb();
+        prepare = connect.prepareStatement(sql);
+        prepare.setString(1, id);
+        row = prepare.executeUpdate();
+
+    }
+    //Delete thong tin tre nho
+    public void addChildDelete() throws SQLException {
         try{
             if(addChildID.getText().isEmpty()
                     || addChildName.getText().isEmpty()
@@ -400,24 +501,36 @@ public class AdminController implements Initializable {
                 alert.showAndWait();
             }
             else{
-                alert = new Alert(Alert.AlertType.INFORMATION);
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Confirmation Message");
                 alert.setHeaderText(null);
                 alert.setContentText("Are you sure you want to delete this child's information?");
                 Optional<ButtonType> result = alert.showAndWait();
+                if (result.isPresent() && result.get() == ButtonType.OK) {
+                    childDelete("bonusreward", addChildID.getText());
+                    childDelete("child", addChildID.getText());
+                    if(addAcademicPerformance.getValue().toString().equals("Excellent")) {
+                        updateHomeFund("2", "Tiền");
+                        updateHomeFund("10", "Bút");
+                        updateHomeFund("10", "Vở");
+                        homeFund();
+                    }
+                    else {
+                        updateHomeFund("1", "Tiền");
+                        updateHomeFund("5", "Bút");
+                        updateHomeFund("5", "Vở");
+                        homeFund();
+                    }
 
-                if (result.get() == (ButtonType.OK)) {
-                    statement = connect.prepareStatement(sql);
-                    statement.executeUpdate(sql);
+                        alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Information Message");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Successfully deleted child.");
+                        alert.showAndWait();
 
-                    alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Successfully deleted child.");
-                    alert.showAndWait();
+                        addChildrenShowListData();
+                        addChildReset();
 
-                    addChildrenShowListData();
-                    addChildReset();
                 }
 
             }
@@ -442,14 +555,14 @@ public class AdminController implements Initializable {
     }
 
     //Phuong thuc tim kiem thong tin tre em(dang loi~)
-public void addChildrenSearch(){
+    public void addChildrenSearch(){
     FilteredList<ChildrenData> filteredList = new FilteredList<>(addChildList, e-> true);
     addSearch.textProperty().addListener((Observable, oldValue, newValue) -> {
         filteredList.setPredicate(predicateData ->{
             if(newValue == null || newValue.isEmpty()){
             return false;}
 
-            String searchKey = newValue;
+            String searchKey = newValue.toLowerCase().trim();
             if(predicateData.getChildID().toLowerCase().contains(searchKey)) {
                 return true;
             }
@@ -481,11 +594,14 @@ public void addChildrenSearch(){
 
 }
     //Phuong thuc chon form home, addchild, reward
-    public void switchForm(ActionEvent event){
+    public void switchForm(ActionEvent event) throws SQLException {
         if(event.getSource() == homeBtn){
             homeForm.setVisible(true);
             addForm.setVisible(false);
             rewardForm.setVisible(false);
+            homeFund();
+            homeTotalChildren();
+            homeTotalPresent();
         }
         else if(event.getSource() == addBtn){
             homeForm.setVisible(false);
@@ -583,7 +699,7 @@ public void addChildrenSearch(){
         rewardColQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         rewardColValue.setCellValueFactory(new PropertyValueFactory<>("value"));
         rewardTableView.setItems(combineList);
-
+        rewardList2.clear();
         rewardTableView.sort();
 
 

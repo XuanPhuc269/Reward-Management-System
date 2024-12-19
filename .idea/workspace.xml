@@ -8,10 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="fix bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/ForgetPasswordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/WelcomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +175,10 @@
       <workItem from="1734169588569" duration="599000" />
       <workItem from="1734236544138" duration="14121000" />
       <workItem from="1734317188330" duration="10554000" />
+      <workItem from="1734412644631" duration="1353000" />
+      <workItem from="1734521317844" duration="4055000" />
+      <workItem from="1734535446654" duration="9060000" />
+      <workItem from="1734581458913" duration="3131000" />
     </task>
     <task id="LOCAL-00001" summary="AdminScene">
       <option name="closed" value="true" />
