@@ -19,7 +19,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@css/AdminScence_style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.AdminController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@css/AdminScence_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.AdminController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -177,79 +177,6 @@
                                  </children></AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="rewardForm" prefHeight="554.6666666666666" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <children>
-                              <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="527.0" prefWidth="243.0">
-                                 <children>
-                                    <Label layoutX="11.0" layoutY="42.0" text="ChildID:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="rewardChildID" layoutX="71.0" layoutY="40.0" />
-                                    <Label layoutX="19.0" layoutY="81.0" text="Name:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="25.0" layoutY="120.0" text="HhID:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="11.0" layoutY="159.0" text="Reward:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="rewardReward" layoutX="71.0" layoutY="157.0" />
-                                    <Label layoutX="6.0" layoutY="200.0" text="Quantity:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="rewardQuantity" layoutX="71.0" layoutY="198.0" />
-                                    <Label layoutX="23.0" layoutY="239.0" text="Value:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <Button fx:id="rewardClearBtn" layoutX="28.0" layoutY="298.0" mnemonicParsing="false" onAction="#rewardClear" prefHeight="40.0" prefWidth="80.0" text="Clear">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                    <Button fx:id="rewardUpdateBtn" layoutX="122.0" layoutY="298.0" mnemonicParsing="false" onAction="#rewardUpdate" prefHeight="40.0" prefWidth="80.0" text="Update">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                    <Button fx:id="rewardResetBtn" layoutX="77.0" layoutY="360.0" mnemonicParsing="false" onAction="#rewardReset" prefHeight="40.0" prefWidth="80.0" text="Reset">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                    <TextField fx:id="rewardChildName" layoutX="71.0" layoutY="79.0" />
-                                    <TextField fx:id="rewardHouseholdID" layoutX="71.0" layoutY="118.0" />
-                                    <TextField fx:id="rewardValue" layoutX="71.0" layoutY="237.0" />
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="257.0" layoutY="6.0" prefHeight="527.0" prefWidth="637.0">
-                                 <children>
-                                    <TableView fx:id="rewardTableView" layoutX="5.0" layoutY="15.0" prefHeight="500.0" prefWidth="614.0">
-                                       <columns>
-                                          <TableColumn fx:id="rewardColChildID" prefWidth="75.0" text="ChildID" />
-                                          <TableColumn fx:id="rewardColChildName" prefWidth="200.0" text="Child Name" />
-                                          <TableColumn fx:id="rewardColHouseholdID" prefWidth="100.0" text="HouseholdID" />
-                                          <TableColumn fx:id="rewardColReward" prefWidth="75.0" text="Reward" />
-                                          <TableColumn fx:id="rewardColQuantity" prefWidth="60.0" text="Quantity" />
-                                          <TableColumn fx:id="rewardColValue" prefWidth="120.0" text="Value" />
-                                       </columns>
-                                    </TableView>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </AnchorPane>
                         <AnchorPane fx:id="addForm" layoutX="297.0" layoutY="127.0" prefHeight="554.6666666666666" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="527.0" prefWidth="873.0">
@@ -349,6 +276,79 @@
                                        </styleClass>
                                     </Button>
                                     <ChoiceBox fx:id="addAcademicPerformance" layoutX="457.0" layoutY="423.0" prefWidth="150.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="rewardForm" prefHeight="554.6666666666666" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="527.0" prefWidth="243.0">
+                                 <children>
+                                    <Label layoutX="11.0" layoutY="42.0" text="ChildID:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="rewardChildID" layoutX="71.0" layoutY="40.0" />
+                                    <Label layoutX="19.0" layoutY="81.0" text="Name:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="120.0" text="HhID:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="159.0" text="Reward:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="rewardReward" layoutX="71.0" layoutY="157.0" />
+                                    <Label layoutX="6.0" layoutY="200.0" text="Quantity:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="rewardQuantity" layoutX="71.0" layoutY="198.0" />
+                                    <Label layoutX="23.0" layoutY="239.0" text="Value:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="rewardClearBtn" layoutX="28.0" layoutY="298.0" mnemonicParsing="false" onAction="#rewardClear" prefHeight="40.0" prefWidth="80.0" styleClass="clear-btn" stylesheets="@css/AdminScence_style.css" text="Clear">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="rewardUpdateBtn" layoutX="122.0" layoutY="298.0" mnemonicParsing="false" onAction="#rewardUpdate" prefHeight="40.0" prefWidth="80.0" styleClass="update-btn" stylesheets="@css/AdminScence_style.css" text="Update">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="rewardResetBtn" layoutX="77.0" layoutY="360.0" mnemonicParsing="false" onAction="#rewardReset" prefHeight="40.0" prefWidth="80.0" styleClass="add-btn" stylesheets="@css/AdminScence_style.css" text="Reset">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="rewardChildName" layoutX="71.0" layoutY="79.0" />
+                                    <TextField fx:id="rewardHouseholdID" layoutX="71.0" layoutY="118.0" />
+                                    <TextField fx:id="rewardValue" layoutX="71.0" layoutY="237.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="257.0" layoutY="6.0" prefHeight="527.0" prefWidth="637.0">
+                                 <children>
+                                    <TableView fx:id="rewardTableView" layoutX="5.0" layoutY="15.0" prefHeight="500.0" prefWidth="614.0">
+                                       <columns>
+                                          <TableColumn fx:id="rewardColChildID" prefWidth="75.0" text="ChildID" />
+                                          <TableColumn fx:id="rewardColChildName" prefWidth="200.0" text="Child Name" />
+                                          <TableColumn fx:id="rewardColHouseholdID" prefWidth="100.0" text="HouseholdID" />
+                                          <TableColumn fx:id="rewardColReward" prefWidth="75.0" text="Reward" />
+                                          <TableColumn fx:id="rewardColQuantity" prefWidth="60.0" text="Quantity" />
+                                          <TableColumn fx:id="rewardColValue" prefWidth="120.0" text="Value" />
+                                       </columns>
+                                    </TableView>
                                  </children>
                               </AnchorPane>
                            </children>
