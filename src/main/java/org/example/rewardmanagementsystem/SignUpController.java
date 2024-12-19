@@ -111,6 +111,7 @@ public class SignUpController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Account created successfully");
                 alert.showAndWait();
+
             }
             else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);

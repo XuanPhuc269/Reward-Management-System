@@ -7,8 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="TXP fix bug">
+    <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="fix bug">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rewardmanagementsystem/WelcomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/AdminScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/LoginScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
-        <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +47,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/XuanPhuc269/Reward-Management-System.git&quot;,
-    &quot;accountId&quot;: &quot;88b30b4d-569f-4fc6-aa94-ede38a563067&quot;
+    &quot;accountId&quot;: &quot;bc1d310e-5747-443a-b6a2-6cd427836cbb&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -71,12 +77,10 @@
     &quot;Application.DatabaseConnection.executor&quot;: &quot;Run&quot;,
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Scene Builder/SceneBuilder.lnk&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -147,8 +151,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -171,9 +175,10 @@
       <workItem from="1734169588569" duration="599000" />
       <workItem from="1734236544138" duration="14121000" />
       <workItem from="1734317188330" duration="10554000" />
-      <workItem from="1734409612680" duration="3173000" />
-      <workItem from="1734579893254" duration="4316000" />
-      <workItem from="1734584748587" duration="844000" />
+      <workItem from="1734412644631" duration="1353000" />
+      <workItem from="1734521317844" duration="4055000" />
+      <workItem from="1734535446654" duration="9060000" />
+      <workItem from="1734581458913" duration="3131000" />
     </task>
     <task id="LOCAL-00001" summary="AdminScene">
       <option name="closed" value="true" />
@@ -215,23 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734407510163</updated>
     </task>
-    <task id="LOCAL-00006" summary="TXP fix bug">
+    <task id="LOCAL-00006" summary="fix bug">
       <option name="closed" value="true" />
-      <created>1734410674858</created>
+      <created>1734410294600</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1734410674858</updated>
+      <updated>1734410294600</updated>
     </task>
-    <task id="LOCAL-00007" summary="TXP fix bug">
-      <option name="closed" value="true" />
-      <created>1734410681136</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1734410681136</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,8 +265,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AdminScene" />
     <MESSAGE value="fix bug" />
-    <MESSAGE value="TXP fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="TXP fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

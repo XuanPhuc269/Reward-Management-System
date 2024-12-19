@@ -19,7 +19,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@css/AdminScence_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.AdminController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@css/AdminScence_style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.AdminController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -117,7 +117,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="homeForm" layoutX="183.0" layoutY="55.0" prefHeight="554.6666666666666" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="homeForm" layoutX="183.0" layoutY="55.0" prefHeight="554.6666666666666" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="528.0" prefWidth="872.0" stylesheets="@css/AdminScence_style.css">
                                  <styleClass>
@@ -139,7 +139,7 @@
                                                    </image>
                                                 </ImageView>
                                                 <Label id="card-label" layoutX="88.0" layoutY="86.0" stylesheets="@css/AdminScence_style.css" text="Total Children" />
-                                                <Label layoutX="219.0" layoutY="9.0" text="20" />
+                                                <Label fx:id="totalChildrenLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="77.0" layoutY="9.0" prefHeight="29.0" prefWidth="173.0" text="20" />
                                              </children>
                                           </AnchorPane>
                                           <AnchorPane layoutX="304.0" layoutY="9.0" prefHeight="121.0" prefWidth="260.0" styleClass="card" stylesheets="@css/AdminScence_style.css">
@@ -150,7 +150,7 @@
                                                    </image>
                                                 </ImageView>
                                                 <Label id="card-label" layoutX="88.0" layoutY="86.0" stylesheets="@css/AdminScence_style.css" text="Total Present" />
-                                                <Label layoutX="219.0" layoutY="9.0" text="14" />
+                                                <Label fx:id="totalPresentLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="68.0" layoutY="9.0" prefHeight="29.0" prefWidth="177.0" text="14" />
                                              </children>
                                           </AnchorPane>
                                           <AnchorPane layoutX="590.0" layoutY="9.0" prefHeight="121.0" prefWidth="260.0" styleClass="card" stylesheets="@css/AdminScence_style.css">
@@ -161,7 +161,7 @@
                                                    </image>
                                                 </ImageView>
                                                 <Label id="card-label" layoutX="88.0" layoutY="86.0" stylesheets="@css/AdminScence_style.css" text="Fund" />
-                                                <Label layoutX="143.0" layoutY="12.0" text="500,000" />
+                                                <Label fx:id="fundLabel" alignment="CENTER_RIGHT" layoutX="88.0" layoutY="12.0" prefHeight="29.0" prefWidth="151.0" text="500,000" />
                                              </children>
                                           </AnchorPane>
                                        </children>
