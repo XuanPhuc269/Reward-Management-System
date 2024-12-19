@@ -119,24 +119,27 @@
 }
 
 .table-view {
-    -fx-background-color: white;
-    -fx-border-color: #212524;
-    -fx-border-width: 1px;
-    -fx-font-family: Poppins, sans-serif;
-    -fx-font-weight: medium;
-}
-
-.table-view .table-column {
-    -fx-background-color: #13ae85;
-    -fx-text-fill: white;
-    -fx-font-family: Poppins, sans-serif;
-    -fx-font-weight: medium;
-    -fx-alignment: center;
+    -fx-background-color: transparent;
     -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
 }
 
-.table-column .first-column {
-    -fx-background-color: black;
+.table-view .table-cell {
+    -fx-alignment: center;
+    -fx-font-family: Poppins, sans-serif;
+}
+
+.table-view .table-cell:odd {
+    -fx-text-fill: #77DEB9;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #77DEB9;
+}
+
+.table-row-cell:odd:selected {
+    -fx-background-color: transparent;
 }
 
 
@@ -172,15 +175,14 @@
 }
 
 .clear-btn {
-    -fx-background-color: transparent;
-    -fx-text-fill: #212524;
+    -fx-background-color: #212524;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
     -fx-cursor: hand;
 }
 
 .clear-btn:hover {
-    -fx-background-color: #212524;
-    -fx-text-fill: white;
-    -fx-background-radius: 15px;
+    -fx-background-color: #444c4a;
 }
 
 .close-btn {
@@ -195,7 +197,7 @@
 /*Home page style*/
 
 .card {
-    -fx-background-color: linear-gradient(to right, #2b303c, #525968);
+    -fx-background-color: linear-gradient(to right, #13ae85, #16d097);
     -fx-background-radius: 10px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
 }
@@ -213,3 +215,4 @@
 .bar-chart:vertical {
     -fx-font-family: Poppins, sans-serif;
 }
+

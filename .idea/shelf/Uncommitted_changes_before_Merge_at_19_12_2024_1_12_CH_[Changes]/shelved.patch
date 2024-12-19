@@ -1,0 +1,18 @@
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-241.18034.62\">\r\n    <data-source name=\"qlhsdb@localhost\" uuid=\"c238db67-b38f-4d28-93fd-9bc023517a93\">\r\n      <database-info product=\"MySQL\" version=\"8.0.40\" jdbc-version=\"4.2\" driver-name=\"Amazon Web Services (AWS) JDBC Driver for MySQL\" driver-version=\"aws-mysql-connector-java-1.1.14 (Revision: 4629bb4ea3ade12a811483453fafcb8fc2a66bb5)\" dbms=\"MYSQL\" exact-version=\"8.0.40\" exact-driver-version=\"1.1\">\r\n        <extra-name-characters>#@</extra-name-characters>\r\n        <identifier-quote-string>`</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\r\n      <secret-storage>master_key</secret-storage>\r\n      <user-name>root</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\" qname=\"@\" />\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	(revision a669fe310cb679c1587236fd2927c4447b05090f)
++++ b/.idea/dataSources.local.xml	(date 1734588771222)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="dataSourceStorageLocal" created-in="IU-241.18034.62">
++  <component name="dataSourceStorageLocal" created-in="IU-243.22562.145">
+     <data-source name="qlhsdb@localhost" uuid="c238db67-b38f-4d28-93fd-9bc023517a93">
+       <database-info product="MySQL" version="8.0.40" jdbc-version="4.2" driver-name="Amazon Web Services (AWS) JDBC Driver for MySQL" driver-version="aws-mysql-connector-java-1.1.14 (Revision: 4629bb4ea3ade12a811483453fafcb8fc2a66bb5)" dbms="MYSQL" exact-version="8.0.40" exact-driver-version="1.1">
+         <extra-name-characters>#@</extra-name-characters>
