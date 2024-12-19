@@ -183,7 +183,7 @@
                                  <children>
                                     <AnchorPane prefHeight="321.0" prefWidth="873.0">
                                        <children>
-                                          <TableView fx:id="addTableView" layoutX="6.0" layoutY="47.0" prefHeight="267.0" prefWidth="861.0" stylesheets="@css/AdminScence_style.css">
+                                          <TableView fx:id="addTableView" layoutX="6.0" layoutY="47.0" onKeyPressed="#addChildrenSearch" prefHeight="267.0" prefWidth="861.0" stylesheets="@css/AdminScence_style.css">
                                             <columns>
                                               <TableColumn fx:id="addColChildID" prefWidth="50.0" text="ChildID" />
                                               <TableColumn fx:id="addColChildName" prefWidth="200.0" text="Child Name" />
