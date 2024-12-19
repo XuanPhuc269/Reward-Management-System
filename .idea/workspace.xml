@@ -9,9 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2dc1303f-1c3c-4a0c-a5ef-620b864ba5fd" name="Changes" comment="TXP fix bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/ParentScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/ParentScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/AdminScence_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/AdminScence_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/ParentScene_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FxmlFile/css/ParentScene_style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +172,8 @@
       <workItem from="1734236544138" duration="14121000" />
       <workItem from="1734317188330" duration="10554000" />
       <workItem from="1734409612680" duration="3173000" />
-      <workItem from="1734579893254" duration="4011000" />
+      <workItem from="1734579893254" duration="4316000" />
+      <workItem from="1734584748587" duration="844000" />
     </task>
     <task id="LOCAL-00001" summary="AdminScene">
       <option name="closed" value="true" />
