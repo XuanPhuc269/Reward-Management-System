@@ -195,7 +195,7 @@
 /*Home page style*/
 
 .card {
-    -fx-background-color: linear-gradient(to right, #2b303c, #525968);
+    -fx-background-color: linear-gradient(to right, #13ae85, #16d097);
     -fx-background-radius: 10px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
 }
@@ -209,6 +209,7 @@
 #card-label {
     -fx-font-size: 16px;
 }
+
 
 .bar-chart:vertical {
     -fx-font-family: Poppins, sans-serif;
