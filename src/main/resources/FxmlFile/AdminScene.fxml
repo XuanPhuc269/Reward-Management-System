@@ -250,13 +250,13 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="addForm" layoutX="297.0" layoutY="127.0" prefHeight="554.6666666666666" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="addForm" layoutX="297.0" layoutY="127.0" prefHeight="554.6666666666666" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="527.0" prefWidth="873.0">
                                  <children>
                                     <AnchorPane prefHeight="321.0" prefWidth="873.0">
                                        <children>
-                                          <TableView fx:id="addTableView" layoutX="6.0" layoutY="47.0" prefHeight="267.0" prefWidth="861.0" stylesheets="@css/AdminScence_style.css">
+                                          <TableView fx:id="addTableView" layoutX="6.0" layoutY="47.0" onKeyPressed="#addChildrenSearch" prefHeight="267.0" prefWidth="861.0" stylesheets="@css/AdminScence_style.css">
                                             <columns>
                                               <TableColumn fx:id="addColChildID" prefWidth="50.0" text="ChildID" />
                                               <TableColumn fx:id="addColChildName" prefWidth="200.0" text="Child Name" />

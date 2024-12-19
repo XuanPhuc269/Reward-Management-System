@@ -166,6 +166,8 @@ public class AdminController implements Initializable {
         addAcademicPerformance.getItems().add("Good");
         addChildrenShowListData();
         displayUsername();
+        addChildrenSearch();
+        addTableView.refresh();
         try {
             rewardChildrenShowListData();
         } catch (SQLException e) {
@@ -480,7 +482,6 @@ public class AdminController implements Initializable {
         prepare = connect.prepareStatement(sql);
         prepare.setString(1, id);
         row = prepare.executeUpdate();
-
     }
     //Delete thong tin tre nho
     public void addChildDelete() throws SQLException {
@@ -549,12 +550,54 @@ public class AdminController implements Initializable {
         addColHouseholdID.setCellValueFactory(new PropertyValueFactory<>("HouseholdID"));
         addColSchool.setCellValueFactory(new PropertyValueFactory<>("childSchool"));
         addColClass.setCellValueFactory(new PropertyValueFactory<>("childClass"));
-        addColAcademicPerformance.setCellValueFactory(new PropertyValueFactory<>("AcademicPerformance"));
+        addColAcademicPerformance.setCellValueFactory(new PropertyValueFactory<>("academicPerformance"));
 
         addTableView.setItems(addChildList);
     }
+    public void addChildrenSearch() {
+        if (addChildList == null || addChildList.isEmpty()) {
+            System.out.println("addChildList is null or empty!");
+            return;
+        }
+
+        // Tạo danh sách lọc
+        FilteredList<ChildrenData> filteredList = new FilteredList<>(addChildList, e -> true);
+
+        // Lắng nghe thay đổi trong ô tìm kiếm
+        addSearch.textProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("Search text: " + newValue); // Kiểm tra giá trị nhập
+            filteredList.setPredicate(predicateData -> {
+                // Hiển thị tất cả nếu ô tìm kiếm trống
+                if (newValue == null || newValue.trim().isEmpty()) {
+                    return true;
+                }
+
+                // Chuyển đổi giá trị tìm kiếm về chữ thường để so sánh
+                String searchKey = newValue.toLowerCase().trim();
+
+                // Kiểm tra từng trường
+                return predicateData.getChildID().toLowerCase().contains(searchKey) ||
+                        predicateData.getChildName().toLowerCase().contains(searchKey) ||
+                        predicateData.getChildClass().toLowerCase().contains(searchKey) ||
+                        predicateData.getHouseholdID().toLowerCase().contains(searchKey) ||
+                        predicateData.getChildSchool().toLowerCase().contains(searchKey) ||
+                        predicateData.getChildDOB().toString().toLowerCase().contains(searchKey) ||
+                        predicateData.getAcademicPerformance().toLowerCase().contains(searchKey);
+            });
+        });
+
+        // Sắp xếp danh sách
+        SortedList<ChildrenData> sortedList = new SortedList<>(filteredList);
+
+        // Liên kết bộ so sánh của bảng với danh sách đã sắp xếp
+        sortedList.comparatorProperty().bind(addTableView.comparatorProperty());
+        System.out.println(sortedList);
+        // Đặt danh sách đã lọc vào bảng
+        addTableView.setItems(sortedList);
+    }
 
     //Phuong thuc tim kiem thong tin tre em(dang loi~)
+    /*
     public void addChildrenSearch(){
     FilteredList<ChildrenData> filteredList = new FilteredList<>(addChildList, e-> true);
     addSearch.textProperty().addListener((Observable, oldValue, newValue) -> {
@@ -593,6 +636,9 @@ public class AdminController implements Initializable {
     addTableView.setItems(sortedList);
 
 }
+
+
+     */
     //Phuong thuc chon form home, addchild, reward
     public void switchForm(ActionEvent event) throws SQLException {
         if(event.getSource() == homeBtn){
