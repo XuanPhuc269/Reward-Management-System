@@ -1,4 +1,4 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
+import org.example.rewardmanagementsystem.Model.*;
 public class SignUpController implements Initializable {
 
     @FXML

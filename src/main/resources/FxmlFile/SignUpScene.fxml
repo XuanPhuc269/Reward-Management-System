@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="white-bg" stylesheets="@css/SignUpScene.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.SignUpController">
+<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="white-bg" stylesheets="@css/SignUpScene.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rewardmanagementsystem.Controller.SignUpController">
    <children>
       <Label fx:id="create_an_account_label" layoutX="63.0" layoutY="58.0" text="Create an account" />
       <Label layoutX="75.0" layoutY="82.0" text="please enter your details" />

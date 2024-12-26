@@ -1,13 +1,11 @@
 @font-face {
     src: url('../font/Montserrat-Bold.ttf');
-    font-family: Montserrat;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
 }
 
 @font-face {
     src: url('../font/Montserrat-SemiBold.ttf');
-    font-family: Montserrat;
-    font-weight: auto;
+    font-family: 'Montserrat-SemiBold';
 }
 
 @font-face {

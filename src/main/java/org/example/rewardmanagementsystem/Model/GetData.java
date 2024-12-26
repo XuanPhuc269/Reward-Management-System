@@ -1,4 +1,4 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.Model;
 
 public class GetData {
     public static String username;

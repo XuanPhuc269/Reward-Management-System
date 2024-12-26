@@ -12,6 +12,7 @@ module org.example.rewardmanagementsystem {
     requires com.almasb.fxgl.all;
     requires java.sql;
 
-    opens org.example.rewardmanagementsystem to javafx.fxml;
-    exports org.example.rewardmanagementsystem;
+    opens org.example.rewardmanagementsystem.Controller to javafx.fxml;
+    opens org.example.rewardmanagementsystem.Model to javafx.base;
+    exports org.example.rewardmanagementsystem.View;
 }

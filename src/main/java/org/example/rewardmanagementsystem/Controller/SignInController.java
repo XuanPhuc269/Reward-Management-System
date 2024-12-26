@@ -1,4 +1,4 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,12 +16,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import org.example.rewardmanagementsystem.Model.*;
 
 public class SignInController implements Initializable {
 
     @FXML
     private Label forgetLabel;
 
+    @FXML
+    private Button forgetBtn;
     @FXML
     private Button loginBtn;
 
@@ -42,6 +44,7 @@ public class SignInController implements Initializable {
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet rs;
+
 
     public void logIn(ActionEvent actionEvent) {
         if(userNameTF.getText().isEmpty() || passwordTF.getText().isEmpty()) {
@@ -90,7 +93,11 @@ public class SignInController implements Initializable {
 
                             //scene cua phu huynh
                             else{
-
+                                Parent root = FXMLLoader.load(getClass().getResource("/FxmlFile/ParentScene.fxml"));
+                                Stage stage = new Stage();
+                                stage.setScene(new Scene(root));
+                                stage.show();
+                                loginBtn.getScene().getWindow().hide();
                             }
                         }
                     }
@@ -117,7 +124,11 @@ public class SignInController implements Initializable {
         }
     }
 
-    public void forget(MouseEvent actionEvent) {
-
+    public void forget(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/FxmlFile/ForgetPasswordScene.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

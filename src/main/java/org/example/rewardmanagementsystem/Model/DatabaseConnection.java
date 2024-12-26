@@ -1,4 +1,4 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.Model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 public class DatabaseConnection {
 
     // Thông tin kết nối Database
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3307/qlhsdb"; // Thay 'database_name' bằng tên database của bạn
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3307/qlhsdb";
     private static final String DB_USER = "root"; // Tài khoản MySQL
     private static final String DB_PASSWORD = "Hoanganh@21"; // Mật khẩu MySQL
 

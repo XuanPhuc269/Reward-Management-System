@@ -1,25 +1,21 @@
 @font-face {
     src: url('../font/Montserrat-Bold.ttf');
-    font-family: Montserrat;
-    font-weight: bold;
+    font-family: 'Montserrat';
 }
 
 @font-face {
     src: url('../font/Montserrat-SemiBold.ttf');
-    font-family: Montserrat;
-    font-weight: 600;
+    font-family: 'Montserrat-SemiBold';
 }
 
 @font-face {
     src: url('../font/Poppins-Regular.ttf');
-    font-family: Poppins;
-    font-weight: normal;
+    font-family: 'Poppins';
 }
 
 @font-face {
     src: url('../font/Poppins-Medium.ttf');
-    font-family: Poppins;
-    font-weight: medium;
+    font-family: 'Poppins-Medium';
 }
 
 .white-bg {
@@ -38,11 +34,10 @@
 
 
 .label {
-    -fx-font-family: Poppins, sans-serif;
-    -fx-font-weight: normal;
+    -fx-font-family: 'Poppins', sans-serif;
 }
 .bold-text {
-    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-family: 'Montserrat', sans-serif;
     -fx-text-fill: #f25430;
 }
 
@@ -62,8 +57,7 @@
 
 .admin-text {
     -fx-text-fill: #F25430;
-    -fx-font-family: Montserrat, sans-serif;
-    -fx-font-weight: 600;
+    -fx-font-family: 'Montserrat-SemiBold', sans-serif;
 }
 
 .function-btn {
@@ -82,7 +76,7 @@
 .logout-btn {
     -fx-background-color: transparent;
     -fx-text-fill: red;
-    -fx-font-family: Poppins, sans-serif;;
+    -fx-font-family: 'Poppins', sans-serif;;
     -fx-cursor: hand;
 }
 
@@ -96,7 +90,7 @@
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
     -fx-border-width: 1px;
-    -fx-font-family: Poppins, sans-serif;
+    -fx-font-family: 'Poppins', sans-serif;
     -fx-font-weight: medium;
     -fx-text-fill: #212524;
     -fx-cursor: hand;
@@ -112,7 +106,7 @@
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
     -fx-border-width: 1px;
-    -fx-font-family: Poppins, sans-serif;
+    -fx-font-family: 'Poppins', sans-serif;
     -fx-font-weight: medium;
     -fx-text-fill: #212524;
     -fx-cursor: hand;
@@ -127,7 +121,7 @@
 
 .table-view .table-cell {
     -fx-alignment: center;
-    -fx-font-family: Poppins, sans-serif;
+    -fx-font-family: 'Poppins', sans-serif;
 }
 
 .table-view .table-cell:odd {
@@ -204,7 +198,7 @@
 
 .card .label {
     -fx-text-fill: white;
-    -fx-font-family: Montserrat, sans-serif;
+    -fx-font-family: 'Montserrat', sans-serif;
     -fx-font-size: 24px;
 }
 
@@ -213,6 +207,6 @@
 }
 
 .bar-chart:vertical {
-    -fx-font-family: Poppins, sans-serif;
+    -fx-font-family: 'Poppins', sans-serif;
 }
 

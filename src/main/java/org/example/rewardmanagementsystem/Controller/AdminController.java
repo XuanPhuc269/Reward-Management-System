@@ -1,15 +1,18 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.Controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
@@ -17,9 +20,10 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.*;
-import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
+import org.example.rewardmanagementsystem.Model.*;
 
 public class AdminController implements Initializable {
 
@@ -159,6 +163,15 @@ public class AdminController implements Initializable {
     @FXML
     private TextField addSearch;
 
+    @FXML
+    private BarChart<String, Number> childrenBarChart;
+
+    @FXML
+    private CategoryAxis xAxis;
+
+    @FXML
+    private NumberAxis yAxis;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -167,7 +180,11 @@ public class AdminController implements Initializable {
         addChildrenShowListData();
         displayUsername();
         addChildrenSearch();
-        addTableView.refresh();
+        try {
+            barChart();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         try {
             rewardChildrenShowListData();
         } catch (SQLException e) {
@@ -252,6 +269,37 @@ public class AdminController implements Initializable {
             totalPresentLabel.setText(resultSet.getString(1));
         }
     }
+
+    //Hien thi barchart
+    public void barChart() throws SQLException {
+        int countExcellent = 0;
+        int countGood = 0;
+        childrenBarChart.getData().clear();
+        String sql1 = "select count(*) from child where AcademicPerformance = ?";
+        connect = database.connectDb();
+        prepare = connect.prepareStatement(sql1);
+        prepare.setString(1, "Excellent");
+        resultSet = prepare.executeQuery();
+        if(resultSet.next()) {
+             countExcellent = Integer.parseInt(resultSet.getString(1));
+        }
+
+        String sql2 = "select count(*) from child where AcademicPerformance = ?";
+        connect = database.connectDb();
+        prepare = connect.prepareStatement(sql2);
+        prepare.setString(1, "Good");
+        resultSet = prepare.executeQuery();
+        if(resultSet.next()) {
+             countGood = Integer.parseInt(resultSet.getString(1));
+        }
+        XYChart.Series<String, Number> series = new XYChart.Series();
+        series.getData().add(new XYChart.Data<>("Excellent", countExcellent));
+        series.getData().add(new XYChart.Data<>("Good", countGood));
+        childrenBarChart.getData().add(series);
+    }
+
+
+
     //Hien ten username
     public void displayUsername(){
         userName.setText(GetData.username);
@@ -270,7 +318,7 @@ public class AdminController implements Initializable {
             while (resultSet.next()) {
                 childrenD = new ChildrenData(resultSet.getString("ChildID"),
                         resultSet.getString("Name"),
-                        resultSet.getDate("DOB"),
+                        resultSet.getString("DOB"),
                         resultSet.getString("School"),
                         resultSet.getString("Class"),
                         resultSet.getString("AcademicPerformance"),
@@ -562,10 +610,8 @@ public class AdminController implements Initializable {
 
         // Tạo danh sách lọc
         FilteredList<ChildrenData> filteredList = new FilteredList<>(addChildList, e -> true);
-
         // Lắng nghe thay đổi trong ô tìm kiếm
         addSearch.textProperty().addListener((observable, oldValue, newValue) -> {
-            System.out.println("Search text: " + newValue); // Kiểm tra giá trị nhập
             filteredList.setPredicate(predicateData -> {
                 // Hiển thị tất cả nếu ô tìm kiếm trống
                 if (newValue == null || newValue.trim().isEmpty()) {
@@ -574,71 +620,22 @@ public class AdminController implements Initializable {
 
                 // Chuyển đổi giá trị tìm kiếm về chữ thường để so sánh
                 String searchKey = newValue.toLowerCase().trim();
-
                 // Kiểm tra từng trường
                 return predicateData.getChildID().toLowerCase().contains(searchKey) ||
                         predicateData.getChildName().toLowerCase().contains(searchKey) ||
                         predicateData.getChildClass().toLowerCase().contains(searchKey) ||
                         predicateData.getHouseholdID().toLowerCase().contains(searchKey) ||
                         predicateData.getChildSchool().toLowerCase().contains(searchKey) ||
-                        predicateData.getChildDOB().toString().toLowerCase().contains(searchKey) ||
+                        predicateData.getChildDOB().toLowerCase().contains(searchKey) ||
                         predicateData.getAcademicPerformance().toLowerCase().contains(searchKey);
             });
         });
 
-        // Sắp xếp danh sách
-        SortedList<ChildrenData> sortedList = new SortedList<>(filteredList);
-
-        // Liên kết bộ so sánh của bảng với danh sách đã sắp xếp
-        sortedList.comparatorProperty().bind(addTableView.comparatorProperty());
-        System.out.println(sortedList);
-        // Đặt danh sách đã lọc vào bảng
-        addTableView.setItems(sortedList);
+        addTableView.setItems(filteredList);
+        addTableView.refresh();
     }
 
-    //Phuong thuc tim kiem thong tin tre em(dang loi~)
-    /*
-    public void addChildrenSearch(){
-    FilteredList<ChildrenData> filteredList = new FilteredList<>(addChildList, e-> true);
-    addSearch.textProperty().addListener((Observable, oldValue, newValue) -> {
-        filteredList.setPredicate(predicateData ->{
-            if(newValue == null || newValue.isEmpty()){
-            return false;}
 
-            String searchKey = newValue.toLowerCase().trim();
-            if(predicateData.getChildID().toLowerCase().contains(searchKey)) {
-                return true;
-            }
-             else if(predicateData.getChildName().toLowerCase().contains(searchKey)) {
-                 return true;
-             }
-             else if(predicateData.getChildClass().toLowerCase().contains(searchKey)) {
-                 return true;
-             }
-             else if(predicateData.getHouseholdID().toLowerCase().contains(searchKey)) {
-                 return true;
-             }
-             else if(predicateData.getChildSchool().toLowerCase().contains(searchKey)) {
-                 return true;
-             }
-             else if(predicateData.getChildDOB().toString().toLowerCase().contains(searchKey)){
-                 return true;
-             }
-             else if(predicateData.getAcademicPerformance().toLowerCase().contains(searchKey)) {
-                 return true;
-             }
-             else return false;
-        });
-    });
-
-    SortedList<ChildrenData> sortedList = new SortedList<>(filteredList);
-    sortedList.comparatorProperty().bind(addTableView.comparatorProperty());
-    addTableView.setItems(sortedList);
-
-}
-
-
-     */
     //Phuong thuc chon form home, addchild, reward
     public void switchForm(ActionEvent event) throws SQLException {
         if(event.getSource() == homeBtn){
@@ -648,6 +645,8 @@ public class AdminController implements Initializable {
             homeFund();
             homeTotalChildren();
             homeTotalPresent();
+            barChart();
+
         }
         else if(event.getSource() == addBtn){
             homeForm.setVisible(false);
@@ -768,6 +767,12 @@ public class AdminController implements Initializable {
         else{
             rewardUpdateListData();
             rewardChildrenShowListData();
+            String sql3 = "Update rewardfund set Quantity = Quantity - ? where RewardName = ?";
+            connect = database.connectDb();
+            prepare = connect.prepareStatement(sql3);
+            prepare.setString(1, rewardQuantity.getText());
+            prepare.setString(2, rewardReward.getText());
+            prepare.executeUpdate();
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Complete!");
             alert.setHeaderText(null);

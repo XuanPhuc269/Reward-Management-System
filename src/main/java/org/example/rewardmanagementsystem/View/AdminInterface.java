@@ -1,4 +1,4 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.View;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

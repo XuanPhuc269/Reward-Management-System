@@ -1,4 +1,4 @@
-package org.example.rewardmanagementsystem;
+package org.example.rewardmanagementsystem.Model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
